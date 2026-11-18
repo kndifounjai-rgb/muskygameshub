@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MUSKYGAMESHUB - Download Emulator Games Free</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a0a12;color:#fff}
+header{background:#11111f;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;border-bottom:2px solid #a100ff}
+.logo{font-size:22px;font-weight:900} .logo span{color:#a100ff} .logo b{color:#7dff00}
+nav a{color:#fff;text-decoration:none;margin:0 10px;font-size:14px} nav a:hover{color:#7dff00}
+.btn{background:#7dff00;color:#000;padding:8px 16px;border-radius:20px;font-weight:800;border:none;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-purple{background:#a100ff;color:#fff}
+.hero{text-align:center;padding:40px 15px;background:linear-gradient(135deg,#1a0033,#0a0a12);border-bottom:2px solid #7dff00}
+.hero h1{font-size:32px;line-height:1.1} .hero h1 span{color:#7dff00}
+.hero p{margin:12px 0;color:#ccc}
+.search{display:flex;max-width:600px;margin:15px auto;background:#111;padding:6px;border-radius:30px;border:1px solid #a100ff}
+.search input{flex:1;background:transparent;border:none;outline:none;color:#fff;padding:10px}
+.cats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:15px}
+.cat{padding:10px 20px;border-radius:20px;border:1px solid #a100ff;background:#111;cursor:pointer}
+.cat.active,.cat:hover{background:#a100ff}
+.wrap{max-width:1100px;margin:auto;padding:20px 15px}
+h2{margin:20px 0 12px} h2 span{color:#7dff00}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:15px}
+.card{background:#151525;border:1px solid #333;border-radius:15px;overflow:hidden}
+.card img{width:100%;height:150px;object-fit:cover;background:#222}
+.card-body{padding:12px}
+.card-body small{color:#aaa}
+.dl{width:100%;margin-top:10px;background:#7dff00;color:#000;border:none;padding:11px;border-radius:10px;font-weight:900;cursor:pointer}
+.dl.purple{background:#a100ff;color:#fff}
+.emu{background:#151525;border:1px solid #7dff00;border-radius:15px;padding:15px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.admin-box{background:#151525;padding:20px;border-radius:15px;border:1px solid #a100ff;max-width:600px;margin:20px auto}
+.admin-box input,.admin-box select,.admin-box textarea{width:100%;padding:12px;margin:7px 0;border-radius:10px;border:1px solid #333;background:#0a0a12;color:#fff;outline:none}
+.how{background:#11111f;padding:15px;border-radius:15px;margin-top:20px}
+footer{text-align:center;padding:20px;color:#888;font-size:13px}
+.hidden{display:none}
+.top-actions{text-align:right;margin-bottom:10px}
+@media(max-width:600px){nav{display:none}.hero h1{font-size:26px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">MUSKY<span>GAMES</span><b>HUB</b> 🎮</div>
+  <nav><a href="#" onclick="showPage('home')">HOME</a><a href="#" onclick="showPage('home')">GAMES</a><a href="#" onclick="showPage('home')">EMULATORS</a></nav>
+  <button class="btn" onclick="showPage('admin')">ADMIN</button>
+</header>
+
+<!-- HOME -->
+<div id="homePage">
+  <div class="hero">
+    <h1>DOWNLOAD EMULATOR GAMES <span>FREE</span></h1>
+    <p>100% FREE • SAFE • FAST DOWNLOADS • PLAY ON PC & ANDROID</p>
+    <div class="search"><input id="searchInput" placeholder="Search GTA, PES, Tekken..." oninput="renderGames()"><button class="btn btn-purple" onclick="renderGames()">SEARCH</button></div>
+    <div class="cats">
+      <button class="cat active" data-cat="All" onclick="setCat('All',this)">All</button>
+      <button class="cat" data-cat="Action" onclick="setCat('Action',this)">Action</button>
+      <button class="cat" data-cat="Football" onclick="setCat('Football',this)">Football</button>
+      <button class="cat" data-cat="Fighting" onclick="setCat('Fighting',this)">Fighting</button>
+      <button class="cat" data-cat="Neon" onclick="setCat('Neon',this)">Neon</button>
+      <button class="cat" data-cat="Emulator" onclick="setCat('Emulator',this)">Emulators</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h2>TRENDING <span>GAMES</span></h2>
+    <div class="grid" id="gamesGrid"></div>
+
+    <h2>DOWNLOAD <span>EMULATORS FIRST</span></h2>
+    <div class="emu"><div><b>PPSSPP - PSP Emulator</b><br><small>Play PSP games on Android & PC</small></div><a class="btn" href="https://www.mediafire.com" target="_blank">DOWNLOAD PPSSPP ⬇️</a></div>
+    <div class="emu"><div><b>AetherSX2 - PS2 Emulator</b><br><small>Play PS2 games on Android</small></div><a class="btn btn-purple" href="https://www.mediafire.com" target="_blank">DOWNLOAD AETHER ⬇️</a></div>
+    <div class="emu"><div><b>DuckStation - PS1 Emulator</b><br><small>Play PS1 games</small></div><a class="btn" href="https://www.mediafire.com" target="_blank">DOWNLOAD ⬇️</a></div>
+    <div class="emu"><div><b>My Boy! - GBA Emulator</b><br><small>Play GBA games</small></div><a class="btn btn-purple" href="https://www.mediafire.com" target="_blank">DOWNLOAD ⬇️</a></div>
+
+    <div class="how"><b>HOW TO PLAY - 3 STEPS:</b><br>1. Download Emulator &nbsp; 2. Download Game from MediaFire &nbsp; 3. Open Emulator, Load Game, Play 🎮</div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div id="adminPage" class="hidden">
+  <div class="wrap">
+    <button class="btn" onclick="showPage('home')">← Back Home</button>
+    <div class="admin-box" id="loginBox">
+      <h2>ADMIN LOGIN 🔒</h2>
+      <p style="color:#aaa;font-size:13px">Only Musky fit enter here.</p>
+      <input id="passInput" type="password" placeholder="Enter Admin Password">
+      <button class="btn" style="width:100%" onclick="login()">LOGIN</button>
+      <p id="loginMsg" style="color:#ff5555;margin-top:8px"></p>
+    </div>
+
+    <div class="admin-box hidden" id="addBox">
+      <h2>ADD NEW GAME / EMULATOR ➕</h2>
+      <input id="gName" placeholder="Game Name e.g GTA San Andreas">
+      <select id="gCat"><option>Action</option><option>Football</option><option>Fighting</option><option>Neon</option><option>Emulator</option></select>
+      <input id="gSize" placeholder="Size e.g 1.5GB">
+      <input id="gEmu" placeholder="Emulator needed e.g PPSSPP">
+      <input id="gImg" placeholder="Cover Image Link (paste image URL)">
+      <input id="gLink" placeholder="MediaFire Link - https://www.mediafire.com/...">
+      <textarea id="gDesc" placeholder="Small description"></textarea>
+      <button class="btn" style="width:100%" onclick="addGame()">PUBLISH GAME 🚀</button>
+      <button class="btn btn-purple" style="width:100%;margin-top:8px" onclick="logout()">LOGOUT</button>
+      <p style="font-size:12px;color:#aaa;margin-top:10px">Tip: Upload game for MediaFire first, copy link, paste am for MediaFire Link box.</p>
+      <div id="myGames"></div>
+    </div>
+  </div>
+</div>
+
+<footer>© 2026 MUSKYGAMESHUB - We no host files. All downloads via MediaFire.</footer>
+
+<script>
+const ADMIN_PASSWORD = "plug237louba";
+let currentCat = "All";
+let defaultGames = [
+  {name:"GTA San Andreas",cat:"Action",size:"1.5GB",emu:"PPSSPP / PS2",img:"https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=600",link:"https://www.mediafire.com",desc:"Action • Open World"},
+  {name:"PES Football 2024",cat:"Football",size:"1.2GB",emu:"PPSSPP",img:"https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=600",link:"https://www.mediafire.com",desc:"Football • Sports"},
+  {name:"Tekken 6",cat:"Fighting",size:"900MB",emu:"PPSSPP",img:"https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600",link:"https://www.mediafire.com",desc:"Fighting • Arcade"},
+  {name:"God of War",cat:"Action",size:"2.1GB",emu:"AetherSX2",img:"https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600",link:"https://www.mediafire.com",desc:"Action • Adventure"},
+  {name:"Neon Racer",cat:"Neon",size:"350MB",emu:"PPSSPP",img:"https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600",link:"https://www.mediafire.com",desc:"Neon • Racing"},
+  {name:"Mortal Kombat",cat:"Fighting",size:"1.0GB",emu:"PPSSPP",img:"https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=600",link:"https://www.mediafire.com",desc:"Fighting"}
+];
+function getGames(){
+  let saved = JSON.parse(localStorage.getItem('musky_games')||'[]');
+  return [...defaultGames, ...saved];
+}
+function renderGames(){
+  let q = document.getElementById('searchInput').value.toLowerCase();
+  let list = getGames().filter(g => (currentCat==='All'||g.cat===currentCat) && g.name.toLowerCase().includes(q));
+  document.getElementById('gamesGrid').innerHTML = list.map(g=>`
+    <div class="card">
+      <img src="${g.img}" onerror="this.src='https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=600'">
+      <div class="card-body"><b>${g.name}</b><br><small>${g.cat} • ${g.size} • ${g.emu}</small><br><small>${g.desc||''}</small>
+      <button class="dl" onclick="window.open('${g.link}','_blank')">⬇️ DOWNLOAD VIA MEDIAFIRE</button></div>
+    </div>`).join('') || '<p>No game found. Add am for Admin.</p>';
+  renderMyGames();
+}
+function setCat(c,el){ currentCat=c; document.querySelectorAll('.cat').forEach(b=>b.classList.remove('active')); el.classList.add('active'); renderGames(); }
+function showPage(p){
+  document.getElementById('homePage').classList.toggle('hidden', p!=='home');
+  document.getElementById('adminPage').classList.toggle('hidden', p!=='admin');
+  if(p==='home') renderGames();
+}
+function login(){
+  if(document.getElementById('passInput').value===ADMIN_PASSWORD){
+    document.getElementById('loginBox').classList.add('hidden');
+    document.getElementById('addBox').classList.remove('hidden');
+  } else { document.getElementById('loginMsg').innerText='Wrong password! Try again.'; }
+}
+function logout(){ document.getElementById('addBox').classList.add('hidden'); document.getElementById('loginBox').classList.remove('hidden'); document.getElementById('passInput').value=''; }
+function addGame(){
+  let g={name:document.getElementById('gName').value,cat:document.getElementById('gCat').value,size:document.getElementById('gSize').value,emu:document.getElementById('gEmu').value,img:document.getElementById('gImg').value||'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=600',link:document.getElementById('gLink').value,desc:document.getElementById('gDesc').value};
+  if(!g.name||!g.link){alert('Put Game Name and MediaFire Link!');return;}
+  let saved=JSON.parse(localStorage.getItem('musky_games')||'[]'); saved.push(g); localStorage.setItem('musky_games',JSON.stringify(saved));
+  alert('Published! ✅ E don show for Home.'); ['gName','gSize','gEmu','gImg','gLink','gDesc'].forEach(id=>document.getElementById(id).value=''); renderGames();
+}
+function renderMyGames(){
+  let saved=JSON.parse(localStorage.getItem('musky_games')||'[]');
+  document.getElementById('myGames').innerHTML = saved.length? '<h3 style="margin-top:15px">Your Posted Games:</h3>'+saved.map((g,i)=>`<p>${g.name} - <a href="${g.link}" target="_blank" style="color:#7dff00">View Link</a></p>`).join(''):'';
+}
+renderGames();
+</script>
+</body>
+</html>
